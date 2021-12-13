@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Swappie">
         <activity
+            android:name=".TradeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.Swappie.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
