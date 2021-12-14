@@ -1,4 +1,4 @@
-package com.example.swappie;
+package com.example.swappapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

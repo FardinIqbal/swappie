@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.swappie">
+    package="com.example.swappapp">
 
     <application
         android:allowBackup="true"
@@ -8,15 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Swappie">
+        android:theme="@style/Theme.SwappApp">
         <activity
-            android:name=".TradeActivity"
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".DashboardActivity"
-            android:exported="true"
-            android:label="@string/title_activity_dashboard"
-            android:theme="@style/Theme.Swappie.NoActionBar" />
+            android:name=".RegisterActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

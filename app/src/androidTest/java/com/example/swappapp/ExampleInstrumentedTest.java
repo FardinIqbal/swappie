@@ -1,4 +1,4 @@
-package com.example.swappie;
+package com.example.swappapp;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.swappie", appContext.getPackageName());
+        assertEquals("com.example.swappapp", appContext.getPackageName());
     }
 }
