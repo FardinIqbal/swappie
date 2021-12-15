@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SwappApp">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
