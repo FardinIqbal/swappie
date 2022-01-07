@@ -4,38 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/logout"
-        android:text="Log Out"
-        android:layout_centerInParent="true"/>
+<!--    Swappie Logo-->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/logout"
-        android:layout_below="@+id/add"
-        android:padding="10dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/listView"/>
-    <EditText
+<!--    Button: Register-->
+    <Button
+        android:id="@+id/register_btn"
+        android:text="Register"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Item Name"
-        android:id="@+id/item"
-        android:layout_marginTop="10dp"/>
+        android:layout_above="@id/login_btn"/>
 
+<!--    Button: Login-->
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="add"
-        android:layout_below="@+id/item"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="18dp"
-        android:id="@+id/add"/>
+        android:id="@+id/login_btn"
+        android:text="Login"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
