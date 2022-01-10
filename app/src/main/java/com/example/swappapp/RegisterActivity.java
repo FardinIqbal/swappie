@@ -37,6 +37,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+
         // Actionbar and its title
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Create Account");
@@ -80,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
         // email and password pattern is valid, show progress dialog and start registering user
         progressDialog.show();
 
-        mAuth.signInWithEmailAndPassword(email, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
