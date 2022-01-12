@@ -11,6 +11,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     // View
     private EditText mEmailEt, mPasswordEt;
     private Button mRegisterBtn;
+    private TextView mHaveAccountTv;
 
     // Progressbar to display while registering user
     ProgressDialog progressDialog;
@@ -51,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
         mEmailEt = findViewById(R.id.emailET);
         mPasswordEt = findViewById(R.id.passwordET);
         mRegisterBtn = findViewById(R.id.registerBtn);
+        mHaveAccountTv = findViewById(R.id.have_accountTv);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Registering User...");
@@ -62,9 +65,10 @@ public class RegisterActivity extends AppCompatActivity {
                 // Input email, password
                 String email = mEmailEt.getText().toString().trim();
                 String password = mPasswordEt.getText().toString().trim();
+
                 // Validate
                 if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    // Set error and focus to email edittext
+                    // Set error and focus to email EditText
                     mEmailEt.setError("Invalid Email");
                     mEmailEt.setFocusable(true);
                 }
@@ -78,7 +82,16 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // handle login TextView click
+        mHaveAccountTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
     }
+
     private void registerUser(String email, String password) {
         // email and password pattern is valid, show progress dialog and start registering user
         progressDialog.show();
