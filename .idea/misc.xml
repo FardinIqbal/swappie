@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AppDevelopment/swappie/app/src/main/res/drawable/edittextstyle.xml" value="0.125" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_login.xml" value="0.16893115942028986" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_post.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_start.xml" value="0.22509057971014493" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/menu/menu_main.xml" value="0.25" />
       </map>
