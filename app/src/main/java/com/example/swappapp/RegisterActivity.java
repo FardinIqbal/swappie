@@ -20,10 +20,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -107,26 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, dismiss dialog and start register activity
                             progressDialog.dismiss();
-
-                            // Get user email and user ID
                             FirebaseUser user = mAuth.getCurrentUser();
-                            String email = user.getEmail();
-                            String userID = user.getUid();
-
-                            // Store user info in firebase real time database using HashMap
-                            HashMap<Object, String> hashMap = new HashMap<>();
-                            // Put info in hashmap
-                            hashMap.put("Email", email);
-                            hashMap.put("userID", userID);
-                            hashMap.put("name", "");
-                            hashMap.put("image", "");
-                            // Firebase database instance
-                            FirebaseDatabase database = FirebaseDatabase.getInstance();
-                            // Store user data in a path called "Users"
-                            DatabaseReference reference = database.getReference("Users");
-                            // Put hashmap data inside the database
-                            reference.child(userID).setValue(hashMap);
-
                             Toast.makeText(RegisterActivity.this, "Registered", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, ProfileActivity.class));
                             finish();
