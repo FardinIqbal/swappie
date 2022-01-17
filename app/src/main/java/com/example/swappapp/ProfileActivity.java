@@ -73,6 +73,9 @@ public class ProfileActivity extends AppCompatActivity {
             firebaseAuth.signOut();
             checkUserStatus();
         }
+        if (id == R.id.action_create_post) {
+            startActivity(new Intent(ProfileActivity.this, CreatePostActivity.class));
+        }
 
         return super.onOptionsItemSelected(item);
     }
