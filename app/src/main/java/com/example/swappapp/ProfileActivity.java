@@ -1,20 +1,41 @@
 package com.example.swappapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import adapters.AdapterItemPosts;
+import models.ModelItemPost;
 
 public class ProfileActivity extends AppCompatActivity {
     // Firebase auth
     FirebaseAuth firebaseAuth;
+
+    RecyclerView recyclerView;
+    List<ModelItemPost> postList;
+    AdapterItemPosts adapterItemPosts;
 
     // Views
     private TextView mProfileTv;
@@ -31,8 +52,38 @@ public class ProfileActivity extends AppCompatActivity {
         // Initialize firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Initialize Views
-        mProfileTv = findViewById(R.id.profileTv);
+        recyclerView = findViewById(R.id.postsRecyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(ProfileActivity.this);
+
+        layoutManager.setStackFromEnd(true);
+        layoutManager.setReverseLayout(true);
+
+        recyclerView.setLayoutManager(layoutManager);
+        // Initial Post List
+        postList = new ArrayList<>();
+
+        loadPosts();
+    }
+
+    private void loadPosts() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("posts");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                postList.clear();
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    ModelItemPost modelItemPost = ds.getValue((ModelItemPost.class));
+                    postList.add(modelItemPost);
+                    adapterItemPosts = new AdapterItemPosts(ProfileActivity.this, postList);
+                    recyclerView.setAdapter(adapterItemPosts);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ProfileActivity.this, "" + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void checkUserStatus() {

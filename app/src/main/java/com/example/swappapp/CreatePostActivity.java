@@ -285,24 +285,22 @@ public class CreatePostActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
                 // Item click handle
-                requestCameraPermission();
-                requestStoragePermission();
-//                if (which == 0) {
-//                    // Camera clicked
-//                    if (!checkCameraPermission()) {
-//                        requestCameraPermission();
-//                    } else {
-//                        pickFromCamera();
-//                    }
-//                }
-//                if (which == 1) {
-//                    // Gallery Clicked
-//                    if (!checkStoragePermission()) {
-//                        requestStoragePermission();
-//                    } else {
-//                        pickFromGallery();
-//                    }
-//                }
+                if (which == 0) {
+                    // Camera clicked
+                    if (!checkCameraPermission()) {
+                        requestCameraPermission();
+                    } else {
+                        pickFromCamera();
+                    }
+                }
+                if (which == 1) {
+                    // Gallery Clicked
+                    if (!checkStoragePermission()) {
+                        requestStoragePermission();
+                    } else {
+                        pickFromGallery();
+                    }
+                }
             }
         });
         // Create and show dialog
