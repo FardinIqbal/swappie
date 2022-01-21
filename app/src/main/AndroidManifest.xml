@@ -2,16 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.swappapp">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-
-    <uses-feature
-        android:name="use"
-        android:required="true" />
-
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SwappApp">
         <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".CreatePostActivity"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,12 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
