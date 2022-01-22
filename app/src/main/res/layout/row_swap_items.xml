@@ -32,10 +32,9 @@
                     android:textSize = "12sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black" />
+                    android:textColor="#2E2047" />
 
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -46,7 +45,7 @@
             android:textSize = "18sp"
             android:textStyle="bold"
             android:text="Title"
-            android:textColor="@color/black"
+            android:textColor="#240057"
             android:autoLink="all"/>
         <TextView
             android:id="@+id/pDescriptionTv"
@@ -54,7 +53,7 @@
             android:layout_height="wrap_content"
             android:textSize = "15sp"
             android:text="caption/description of post"
-            android:textColor="@color/black"
+            android:textColor="#240057"
             android:autoLink="all"/>
     </LinearLayout>
 

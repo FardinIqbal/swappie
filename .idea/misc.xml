@@ -12,10 +12,13 @@
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_start.xml" value="0.22509057971014493" />
+        <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/activity_upload_swap_item.xml" value="0.12158054711246201" />
+        <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/fragment_all_swap_items.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/fragment_users.xml" value="0.25" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/row_posts.xml" value="0.1" />
+        <entry key="..\:/AppDevelopment/swappie/app/src/main/res/layout/row_swap_items.xml" value="0.1" />
         <entry key="..\:/AppDevelopment/swappie/app/src/main/res/menu/menu_main.xml" value="0.25" />
       </map>
     </option>
