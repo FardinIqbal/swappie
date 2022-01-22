@@ -1,16 +1,15 @@
 package models;
 
-public class ModelItemPost {
-    String pId, pTitle, pDescription, pImage, pTime, uid, uEmail, uDp, uName;
+public class ModelPost {
+    String pId, pTitle, pDescr, pTime, uid, uEmail, uDp, uName;
 
-    public ModelItemPost() {
+    public ModelPost() {
 
     }
-    public ModelItemPost(String pId, String pTitle, String pDescription, String pImage, String pTime, String uid, String uEmail, String uDp, String uName) {
+    public ModelPost(String pId, String pTitle, String pDescr , String pTime, String uid, String uEmail, String uDp, String uName) {
         this.pId = pId;
         this.pTitle = pTitle;
-        this.pDescription = pDescription;
-        this.pImage = pImage;
+        this.pDescr = pDescr;
         this.pTime = pTime;
         this.uid = uid;
         this.uEmail = uEmail;
@@ -34,20 +33,12 @@ public class ModelItemPost {
         this.pTitle = pTitle;
     }
 
-    public String getpDescription() {
-        return pDescription;
+    public String getpDescr() {
+        return pDescr;
     }
 
     public void setpDescription(String pDescription) {
-        this.pDescription = pDescription;
-    }
-
-    public String getpImage() {
-        return pImage;
-    }
-
-    public void setpImage(String pImage) {
-        this.pImage = pImage;
+        this.pDescr = pDescr;
     }
 
     public String getpTime() {

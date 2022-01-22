@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="5dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/pTimeTv"
+                    android:text="# min"
+                    android:textSize = "12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize = "18sp"
+            android:textStyle="bold"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:autoLink="all"/>
+        <TextView
+            android:id="@+id/pDescriptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize = "15sp"
+            android:text="caption/description of post"
+            android:textColor="@color/black"
+            android:autoLink="all"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

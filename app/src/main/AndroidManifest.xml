@@ -10,14 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SwappApp">
         <activity
+            android:name=".UploadSwapItem"
+            android:exported="false" />
+        <activity
             android:name=".DashboardActivity"
             android:exported="false" />
-        <activity
-            android:name=".CreatePostActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

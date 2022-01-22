@@ -7,7 +7,7 @@
     android:padding="20dp"
     tools:context=".RegisterActivity">
 
-<!--    TextView: Label Register-->
+    <!--    TextView: Label Register-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    Button: Register User-->
+    <!--    Button: Register User-->
     <Button
         android:id="@+id/registerBtn"
         android:text="Register"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"/>
 
-<!--    TextView: Click to go to LoginActivity-->
+    <!--    TextView: Click to go to LoginActivity-->
     <TextView
         android:id="@+id/have_accountTv"
         android:layout_width="match_parent"
