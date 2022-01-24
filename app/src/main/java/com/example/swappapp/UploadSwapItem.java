@@ -72,7 +72,7 @@ public class UploadSwapItem extends AppCompatActivity {
         });
 
 
-        titleEt = findViewById(R.id.pTitleEt);
+        titleEt = findViewById(R.id.pItemNameEt);
         descriptionEt = findViewById(R.id.pDescriptionEt);
         uploadBtn = findViewById(R.id.pUploadBtn);
 
